@@ -15,20 +15,20 @@
         "minifcation"
     ],
     "authors": [
-    		{
-      			"name": "Derek McBurney",
-      			"homepage": "https://derekmcburney.com",
-      			"role": "Developer"
-    		}
-  	],
+        {
+            "name": "Derek McBurney",
+            "homepage": "https://derekmcburney.com",
+            "role": "Developer"
+        }
+    ],
     "autoload": {
         "psr-0": {
             "dmcb\\SilverStripe\\htmlminification\\": "src/"
         }
     },
     "support": {
-    		"issues": "https://github.com/dmcb/silverstripe-html-minification/issues"
-  	},
+        "issues": "https://github.com/dmcb/silverstripe-html-minification/issues"
+    },
     "extra": {
         "installer-name": "htmlminification"
     },
