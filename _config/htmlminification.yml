@@ -10,7 +10,7 @@ dmcb\HTMLMinification\HTMLMinificationMiddleware:
   doRemoveWhitespaceAroundTags: false
   doOptimizeAttributes: true
   doRemoveHttpPrefixFromAttributes: true
-  doRemoveDefaultAttributes: true
+  doRemoveDefaultAttributes: false
   doRemoveDeprecatedAnchorName: true
   doRemoveDeprecatedScriptCharsetAttribute: true
   doRemoveDeprecatedTypeFromScriptTag: true
