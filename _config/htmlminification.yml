@@ -3,3 +3,20 @@ SilverStripe\Core\Injector\Injector:
     properties:
       Middlewares:
         CustomMiddleware: %$HTMLMinificationMiddleware
+dmcb\HTMLMinification\HTMLMinificationMiddleware:
+  doOptimizeViaHtmlDomParser: true
+  doRemoveComments: true
+  doSumUpWhitespace: true
+  doRemoveWhitespaceAroundTags: false
+  doOptimizeAttributes: true
+  doRemoveHttpPrefixFromAttributes: true
+  doRemoveDefaultAttributes: true
+  doRemoveDeprecatedAnchorName: true
+  doRemoveDeprecatedScriptCharsetAttribute: true
+  doRemoveDeprecatedTypeFromScriptTag: true
+  doRemoveDeprecatedTypeFromStylesheetLink: true
+  doRemoveEmptyAttributes: true
+  doRemoveValueFromEmptyInput: true
+  doSortCssClassNames: true
+  doSortHtmlAttributes: true
+  doRemoveSpacesBetweenTags: false
