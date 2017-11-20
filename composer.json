@@ -1,0 +1,36 @@
+{
+    "name": "dmcb/silverstripe-html-minification",
+    "description": "Minifies HTML of Silverstripe HTTP responses",
+    "type": "silverstripe-vendormodule",
+    "homepage": "https://github.com/dmcb/silverstripe-html-minification",
+    "require": {
+        "silverstripe/vendor-plugin": "^1.0",
+        "silverstripe/framework": "^4.0",
+        "voku/html-min": "^1.0"
+    },
+    "license": "BSD-3-Clause",
+    "keywords": [
+        "SilverStripe",
+        "minify",
+        "minifcation"
+    ],
+    "authors": [
+    		{
+      			"name": "Derek McBurney",
+      			"homepage": "https://derekmcburney.com",
+      			"role": "Developer"
+    		}
+  	],
+    "autoload": {
+        "psr-0": {
+            "dmcb\\SilverStripe\\htmlminification\\": "src/"
+        }
+    },
+    "support": {
+    		"issues": "https://github.com/dmcb/silverstripe-html-minification/issues"
+  	},
+    "extra": {
+        "installer-name": "htmlminification"
+    },
+    "minimum-stability": "dev"
+}
