@@ -1,9 +1,4 @@
-SilverStripe\Core\Injector\Injector:
-  SilverStripe\Control\Director:
-    properties:
-      Middlewares:
-        CustomMiddleware: %$HTMLMinificationMiddleware
-dmcb\HTMLMinification\HTMLMinificationMiddleware:
+dmcb\HTMLMinification\HTMLMinificationExtension:
   doOptimizeViaHtmlDomParser: true
   doRemoveComments: true
   doSumUpWhitespace: true

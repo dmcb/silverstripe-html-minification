@@ -28,3 +28,11 @@ Define HTML minification settings for your project in `mysite/_config/config.yml
     doSortHtmlAttributes = true                     // sort html-attributes, for better gzip results (depends on "doOptimizeAttributes(true)")
     doRemoveSpacesBetweenTags = false               // remove more (aggressive) spaces in the dom (disabled by default)
 ```
+
+And extend any ContentControllers to enable HTML minification for the index output of that controller:
+
+```
+ContentController:
+  extensions:
+    - dmcb\HTMLMinification\HTMLMinificationExtension
+```
