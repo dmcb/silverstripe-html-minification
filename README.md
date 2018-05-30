@@ -10,7 +10,7 @@ Minifies the HTML of SilverStripe HTTP responses.
 Define HTML minification settings for your project in `mysite/_config/config.yml`. These are the default values:
 
 ```
-  dmcb\HTMLMinification\HTMLMinificationExtension:
+  dmcb\HTMLMinification\Extensions\HTMLMinificationExtension:
     doOptimizeViaHtmlDomParser: true               // optimize html via "HtmlDomParser()"
     doRemoveComments: true                         // remove default HTML comments (depends on "doOptimizeViaHtmlDomParser(true)")
     doSumUpWhitespace: true                        // sum-up extra whitespace from the Dom (depends on "doOptimizeViaHtmlDomParser(true)")
@@ -34,5 +34,5 @@ And extend any ContentControllers to enable HTML minification for the index outp
 ```
 ContentController:
   extensions:
-    - dmcb\HTMLMinification\HTMLMinificationExtension
+    - dmcb\HTMLMinification\Extensions\HTMLMinificationExtension
 ```

@@ -22,15 +22,12 @@
         }
     ],
     "autoload": {
-        "psr-0": {
-            "dmcb\\SilverStripe\\htmlminification\\": "src/"
+        "psr-4": {
+            "dmcb\\HTMLMinification\\": "src/"
         }
     },
     "support": {
         "issues": "https://github.com/dmcb/silverstripe-html-minification/issues"
-    },
-    "extra": {
-        "installer-name": "htmlminification"
     },
     "minimum-stability": "dev"
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace dmcb\HTMLMinification;
+namespace dmcb\HTMLMinification\Extensions;
 
 use SilverStripe\Control\HTTPRequest;
 use SilverStripe\Core\Extension;
@@ -124,22 +124,22 @@ class HTMLMinificationExtension extends Extension
     public function index() {
         $htmlMin = new HtmlMin();
 
-        $htmlMin->doOptimizeViaHtmlDomParser(Config::inst()->get('dmcb\HTMLMinification\HTMLMinificationExtension', 'doOptimizeViaHtmlDomParser'));
-        $htmlMin->doRemoveComments(Config::inst()->get('dmcb\HTMLMinification\HTMLMinificationExtension', 'doRemoveComments'));
-        $htmlMin->doSumUpWhitespace(Config::inst()->get('dmcb\HTMLMinification\HTMLMinificationExtension', 'doSumUpWhitespace'));
-        $htmlMin->doRemoveWhitespaceAroundTags(Config::inst()->get('dmcb\HTMLMinification\HTMLMinificationExtension', 'doRemoveWhitespaceAroundTags'));
-        $htmlMin->doOptimizeAttributes(Config::inst()->get('dmcb\HTMLMinification\HTMLMinificationExtension', 'doOptimizeAttributes'));
-        $htmlMin->doRemoveHttpPrefixFromAttributes(Config::inst()->get('dmcb\HTMLMinification\HTMLMinificationExtension', 'doRemoveHttpPrefixFromAttributes'));
-        $htmlMin->doRemoveDefaultAttributes(Config::inst()->get('dmcb\HTMLMinification\HTMLMinificationExtension', 'doRemoveDefaultAttributes'));
-        $htmlMin->doRemoveDeprecatedAnchorName(Config::inst()->get('dmcb\HTMLMinification\HTMLMinificationExtension', 'doRemoveDeprecatedAnchorName'));
-        $htmlMin->doRemoveDeprecatedScriptCharsetAttribute(Config::inst()->get('dmcb\HTMLMinification\HTMLMinificationExtension', 'doRemoveDeprecatedScriptCharsetAttribute'));
-        $htmlMin->doRemoveDeprecatedTypeFromScriptTag(Config::inst()->get('dmcb\HTMLMinification\HTMLMinificationExtension', 'doRemoveDeprecatedTypeFromScriptTag'));
-        $htmlMin->doRemoveDeprecatedTypeFromStylesheetLink(Config::inst()->get('dmcb\HTMLMinification\HTMLMinificationExtension', 'doRemoveDeprecatedTypeFromStylesheetLink'));
-        $htmlMin->doRemoveEmptyAttributes(Config::inst()->get('dmcb\HTMLMinification\HTMLMinificationExtension', 'doRemoveEmptyAttributes'));
-        $htmlMin->doRemoveValueFromEmptyInput(Config::inst()->get('dmcb\HTMLMinification\HTMLMinificationExtension', 'doRemoveValueFromEmptyInput'));
-        $htmlMin->doSortCssClassNames(Config::inst()->get('dmcb\HTMLMinification\HTMLMinificationExtension', 'doSortCssClassNames'));
-        $htmlMin->doSortHtmlAttributes(Config::inst()->get('dmcb\HTMLMinification\HTMLMinificationExtension', 'doSortHtmlAttributes'));
-        $htmlMin->doRemoveSpacesBetweenTags(Config::inst()->get('dmcb\HTMLMinification\HTMLMinificationExtension', 'doRemoveSpacesBetweenTags'));
+        $htmlMin->doOptimizeViaHtmlDomParser(Config::inst()->get('dmcb\HTMLMinification\Extensions\HTMLMinificationExtension', 'doOptimizeViaHtmlDomParser'));
+        $htmlMin->doRemoveComments(Config::inst()->get('dmcb\HTMLMinification\Extensions\HTMLMinificationExtension', 'doRemoveComments'));
+        $htmlMin->doSumUpWhitespace(Config::inst()->get('dmcb\HTMLMinification\Extensions\HTMLMinificationExtension', 'doSumUpWhitespace'));
+        $htmlMin->doRemoveWhitespaceAroundTags(Config::inst()->get('dmcb\HTMLMinification\Extensions\HTMLMinificationExtension', 'doRemoveWhitespaceAroundTags'));
+        $htmlMin->doOptimizeAttributes(Config::inst()->get('dmcb\HTMLMinification\Extensions\HTMLMinificationExtension', 'doOptimizeAttributes'));
+        $htmlMin->doRemoveHttpPrefixFromAttributes(Config::inst()->get('dmcb\HTMLMinification\Extensions\HTMLMinificationExtension', 'doRemoveHttpPrefixFromAttributes'));
+        $htmlMin->doRemoveDefaultAttributes(Config::inst()->get('dmcb\HTMLMinification\Extensions\HTMLMinificationExtension', 'doRemoveDefaultAttributes'));
+        $htmlMin->doRemoveDeprecatedAnchorName(Config::inst()->get('dmcb\HTMLMinification\Extensions\HTMLMinificationExtension', 'doRemoveDeprecatedAnchorName'));
+        $htmlMin->doRemoveDeprecatedScriptCharsetAttribute(Config::inst()->get('dmcb\HTMLMinification\Extensions\HTMLMinificationExtension', 'doRemoveDeprecatedScriptCharsetAttribute'));
+        $htmlMin->doRemoveDeprecatedTypeFromScriptTag(Config::inst()->get('dmcb\HTMLMinification\Extensions\HTMLMinificationExtension', 'doRemoveDeprecatedTypeFromScriptTag'));
+        $htmlMin->doRemoveDeprecatedTypeFromStylesheetLink(Config::inst()->get('dmcb\HTMLMinification\Extensions\HTMLMinificationExtension', 'doRemoveDeprecatedTypeFromStylesheetLink'));
+        $htmlMin->doRemoveEmptyAttributes(Config::inst()->get('dmcb\HTMLMinification\Extensions\HTMLMinificationExtension', 'doRemoveEmptyAttributes'));
+        $htmlMin->doRemoveValueFromEmptyInput(Config::inst()->get('dmcb\HTMLMinification\Extensions\HTMLMinificationExtension', 'doRemoveValueFromEmptyInput'));
+        $htmlMin->doSortCssClassNames(Config::inst()->get('dmcb\HTMLMinification\Extensions\HTMLMinificationExtension', 'doSortCssClassNames'));
+        $htmlMin->doSortHtmlAttributes(Config::inst()->get('dmcb\HTMLMinification\Extensions\HTMLMinificationExtension', 'doSortHtmlAttributes'));
+        $htmlMin->doRemoveSpacesBetweenTags(Config::inst()->get('dmcb\HTMLMinification\Extensions\HTMLMinificationExtension', 'doRemoveSpacesBetweenTags'));
 
         $html = $this->owner->render();
         $minifiedHtml = $htmlMin->minify($html);
